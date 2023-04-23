@@ -72,7 +72,7 @@
 |table(df_midterm$report)|table()report 집계|A(3) B(1) 
 |sort(df_midterm$math,decreasing = T)|math() 점수 내림차순|100  60  50  20|
 |names(pick) <- c("3rd","7th","32th");pick|
-|pick[-2];pick|pick 벡터에서 '7th'인 값을 제외하고 출력|`항목명을 기준으로 -c("7th)불가`
+|pick[-2];pick|pick 벡터에서 2열인 '7th'인 값을 제외하고 출력|`항목명을 기준으로 -c("7th)불가`
 ---
 
 #### - ***`벡터에서 특정 값만 추출하기(중요)`**
