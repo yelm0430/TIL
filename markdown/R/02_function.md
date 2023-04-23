@@ -70,7 +70,7 @@
 |---|---|---|---|---|
 |str5 <-c("Hello!", "World", "is", "good!")|
 ||`paste`( str5, `sep =` ",")|"Hello!Worldisgood!"|`sep()` :  문자열을 이어붙일 때 사용하는 구분자를 지정
-||`paste`( str5, `collapse =` ",")|"Hello!,World,is,good!"|`collapse()`: 결과를 하나의 문자열로 결합할 때 사용|`paste()는 여러 개의 문자열이나 숫자값을 결합하여 하나의 문자열로 만드는 기능을 한다`
+||`paste`( str5, `collapse =` ",")|"Hello!,World,is,good!"|`collapse()`: git결과를 하나의 문자열로 결합할 때 사용|`paste()는 여러 개의 문자열이나 숫자값을 결합하여 하나의 문자열로 만드는 기능을 한다`
 |a <- 1:12
 |b <- "월"
 ||c <- `paste`(a,b,sep='')
