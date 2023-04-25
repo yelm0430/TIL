@@ -44,7 +44,9 @@
 ||df_1 <- `subset`(iris,Species `==` "setosa")|
 ||df_2 <- iris`[`iris$Species `==` "setosa" `,]`
 ||df_3 `%>% filter`(iris$Species `==` "setosa")
-|best <- `subset`(데이터셋(love),likes `==` max(love$likes))|likes가 가장 많은 수록곡(변수)만 추출하여 변수 best에 저장|`subset은 전체 데이터에서 조건에 맞는 행들만 추출`|
-|best <- 데이터셋(love)`[`데이터셋(love)$title == "aswsome" `,]`|title이 awesome인 변수를 추출하여 best에 저장
-|iris `%>% select`(Sepal.Length,Sepal.Width) `%>% filter` (Sepal.Length >=6 ; Sepal.Width >= 3) `%>%` head(10)|sepal.width가 6이상이거나, petal.width가 3이상인 데이터 추출|`select` : 특정 열만 추출
-||| `filter` : 특정 조건 제시
+||best <- `subset`(데이터셋(love),likes `==` max(love$likes))|likes가 가장 많은 수록곡(변수)만 추출하여 변수 best에 저장|`subset은 전체 데이터에서 조건에 맞는 행들만 추출`|
+||best <- 데이터셋(love)`[`데이터셋(love)$title == "aswsome" `,]`|title이 awesome인 변수를 추출하여 best에 저장
+||iris `%>% select`(Sepal.Length,Sepal.Width) `%>% filter` (Sepal.Length >=6 ; Sepal.Width >= 3) `%>%` head(10)|sepal.width가 6이상이거나, petal.width가 3이상인 데이터 추출|`select` : 특정 열만 추출
+|||| `filter` : 특정 조건 제시
+|mpg|
+||mpg_1$cty <- `ifelse`(mpg_1$cty>= 25, NA,mpg_1$cty)|도시 연비 25 이상인 값을 NA로 처리하여 mpg_1$cty에 다시 저장

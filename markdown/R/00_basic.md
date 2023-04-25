@@ -10,6 +10,7 @@
 ### `데이터 분석 정리 단축키`
 |코드|의미|설정|예시
 |---|---|---|---|
+|`par(family="AppleGothic")|OS 한글꺠짐`|
 |ctrl + enter|실행
 |ctrl + shift + c|선택한 부분 주석처리
 |ctrl + 2|console 창으로 이동
@@ -22,7 +23,6 @@
 |getwd()|현재 작업이 실행되고 directory 확인|
 |setwd("**현재 directory**")|directory 변경|한 번만 `/` 사용|setwd("`/`Users`/`jang-yelim`/`R_TEMP`/`yelim`/`")
 ||| 두 번 사용시 `\\` 사용|setwd("`\\`Users`\\`jang-yelim`\\`R_TEMP`\\`yelim`\\`")
-|par(family="AppleGothic")|OS 한글꺠짐|
 ----
 
 ### `에러 발생 시`
