@@ -22,6 +22,7 @@
 |getwd()|현재 작업이 실행되고 directory 확인|
 |setwd("**현재 directory**")|directory 변경|한 번만 `/` 사용|setwd("`/`Users`/`jang-yelim`/`R_TEMP`/`yelim`/`")
 ||| 두 번 사용시 `\\` 사용|setwd("`\\`Users`\\`jang-yelim`\\`R_TEMP`\\`yelim`\\`")
+|par(family="AppleGothic")|OS 한글꺠짐|
 ----
 
 ### `에러 발생 시`
@@ -33,6 +34,12 @@
 |---|---|
 |rm ( list=ls() )|변수 전체 삭제 
 |rm (변수명)|특정 변수 삭제
+----
+### `변수 확인`
+|코드|의미|
+|---|---|
+|ls()|현재 활성화 되어있는 변수 목록 확인 
+|ls (변수명)|특정 데이터셋의 변수 확인
 ----
 
 ### `변수 삽입`
@@ -80,6 +87,8 @@
 |---|---|---|---|
 |library(tidyverse)사용
 ||`rename(data,신변수명 = 구변수명)`|mpg_new <- rename(mpg_new,city=cty,highway=hwy)|mpg_new에서 cty는 (city)로, hwy는 (highway)로 변수명을 수정하세요.
+|tolower|names(iris_lower) <- tolower(names(iris))||항목이름 소문자 변경
+
 
 - `새로운 변수 추가(파생변수)`
 

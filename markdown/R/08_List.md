@@ -32,3 +32,8 @@
 |sum(sale.day)||2899|총매출액
 |sale.mean <- mean(sale.day)||414.1429|평균 매출액
 |names(sale.day[sale.day>=sale.mean])||"Sat" "Sun"|평균 매출액 이상인 요일 추출
+---
+#### **`리스트 해제`**
+|코드||결과|설명|
+|---|---|---|---|
+|unlist(years)|데이터 프레임 형태로 추출됨|벡터로 변환됨|

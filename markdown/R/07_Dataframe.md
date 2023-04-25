@@ -38,7 +38,13 @@
 |df_new1 <- select(df_new,c(1:2))|df_new에서 1~2행 가져오기|
 ---
 #### - **`특정 조건의 데이터 프레임 만들기_2`**
-|코드|의미|주의사항|
-|---|---|---|
-|best <- `subset`(변수명,likes == max(love$likes))|likes가 가장 많은 수록곡(변수)만 추출하여 변수 best에 저장|`subset은 전체 데이터에서 조건에 맞는 행들만 추출`|
-|iris_vi %>% filter(sepal.width >=3.0 & petal.width >=2.0) %>% head(3)|sepal.width가 3.0이상이고, petal.width가 2.0이상인 데이터 추출|~와 ~는 같다를 사용할 때는 `==`2개 사용|
+|데이터|코드|의미|참고|
+|---|---|---|---|
+|iris|
+||df_1 <- `subset`(iris,Species `==` "setosa")|
+||df_2 <- iris`[`iris$Species `==` "setosa" `,]`
+||df_3 `%>% filter`(iris$Species `==` "setosa")
+|best <- `subset`(데이터셋(love),likes `==` max(love$likes))|likes가 가장 많은 수록곡(변수)만 추출하여 변수 best에 저장|`subset은 전체 데이터에서 조건에 맞는 행들만 추출`|
+|best <- 데이터셋(love)`[`데이터셋(love)$title == "aswsome" `,]`|title이 awesome인 변수를 추출하여 best에 저장
+|iris `%>% select`(Sepal.Length,Sepal.Width) `%>% filter` (Sepal.Length >=6 ; Sepal.Width >= 3) `%>%` head(10)|sepal.width가 6이상이거나, petal.width가 3이상인 데이터 추출|`select` : 특정 열만 추출
+||| `filter` : 특정 조건 제시
