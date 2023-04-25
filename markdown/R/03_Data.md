@@ -13,15 +13,16 @@
 
 ---
 ### **`- 데이터 정제 `**
-|코드|의미|예시|예시 의미|비고|
+|의미|코드|예시|의미|비고|
 |---|---|---|---|---|
-|is.na()|na(결측값) `유무 확인|table(is.na(df$sex))|성별의 na의 유무확인
-|||df %>% filter(!is.na(score) & !is.na(sex))|na를 제외한 score과 sex값 추출
-|na.rm()|`na값을 가진 변수를 제외한 나머지` 값 추출|sum(df$score,na.rm = T)|score에서 na값을 제외한 합계|`데이터에는 존재하나 통계분석시에만 사용된다`|
-|na.omit()|모든 변수에서 `na값이 존재하는 행 삭제`|df(na.omit)
-|best <- `subset`(love,likes == max(love$likes))|likes가 가장 많은 수록곡만 추출하여 변수 best에 저장|||`subset은 전체 데이터에서 조건에 맞는 행들만 추출`|
-|||||subset 사용시 `$`를 넣지 않아 코드가 짧아져 가독성이 좋음|
-|iris_vi %>% filter(sepal.width >=3.0 & petal.width >=2.0) %>% head(3)|sepal.width가 3.0이상이고, petal.width가 2.0이상인 데이터 추출|||~와 ~는 같다를 사용할 때는 `==`2개 사용|
+|**결측치 확인**|
+||is.na()|table(is.na(df$score))|점수 na의 유무 확인
+|**결측치 제거**|
+||filter()|filter(!is.na(score)) & !is.na(sex)|na를 제외한 score과 sex값 추출
+||na.rm()|sum(df$score,na.rm = T)|score에서 na값을 제외한 합계|`na값을 가진 변수를 제외한 나머지` 값 추출
+|||||`데이터에는 존재하나 통계분석시에만 사용된다`|
+||na.omit()|||모든 변수에서 `na값이 존재하는 행 삭제`
+
 ---
 ### **`- 데이터의 입출력 `**
 |코드|의미|주의사항|예시|결과|
