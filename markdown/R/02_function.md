@@ -71,7 +71,9 @@
 ||type = "골드"
 ||ratio = 0.05
 ||}
-    |
+|subset|df_1 <- `subset`(iris,Species `==` "setosa")|
+|인덱스|df_2 <- iris`[`iris$Species `==` "setosa" `,]`
+|filter|df_3 `%>% filter`(iris$Species `==` "setosa")
 ---
 ### `반복문`
 |함수|코드|예시|결과|의미|
@@ -81,7 +83,8 @@
 ||}|}
 
 ---
-### **`paste 함수`**
+### **`데이터 합치기`**
+#### - **`paste 함수`**
 |코드|paste|결과|해석|비고|
 |---|---|---|---|---|
 |str5 <-c("Hello!", "World", "is", "good!")|
@@ -98,3 +101,12 @@
 ||item1 <- `paste`(s1,num1,sep="");item1|
 |names(total) <- item1;total|| score.1(68)  score.2(95)  score.3(83)  score.4(76)  score.5(90)  score.6(80)  score.7(85)  score.8(91)score.9(82) score.10(70)|값 추가하기
 ---
+#### - **`stack 함수`**
+|함수|코드|의미|
+|---|---|---|
+|stack()|comb <- `stack`(list(fresh = freshmen, soph = sophomores, jrs = juniors))|집단을 합치기|
+---
+### **`파생 변수 생성 함수`**
+|함수|코드|의미|
+|---|---|---|
+|mutate|exam_tot <-exam %>% mutate(total =  math + english + science, mean = (math + english + science)/3)|수학 + 영어 + 과학 점수의 합계와 평균을 구해 exam_tot에 새로운 변수로 할당해라 
