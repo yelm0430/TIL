@@ -21,8 +21,6 @@
 |ctrl + O | 파일 열기
 |(ctrl + shift + m)|파이프라인
 |getwd()|현재 작업이 실행되고 directory 확인|
-|setwd("**현재 directory**")|directory 변경|한 번만 `/` 사용|setwd("`/`Users`/`jang-yelim`/`R_TEMP`/`yelim`/`")
-||| 두 번 사용시 `\\` 사용|setwd("`\\`Users`\\`jang-yelim`\\`R_TEMP`\\`yelim`\\`")
 ----
 
 ### `에러 발생 시`
