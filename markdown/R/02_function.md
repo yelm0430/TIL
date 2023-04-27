@@ -111,5 +111,5 @@
 |---|---|---|
 |mutate|exam_tot <-
 ||exam %>%
-||mutate(total =  math + english + science, mean = (math + english + science)/3)|수학 + 영어 + 과학 점수의 합계와 평균을 구해 exam_tot에 새로운 변수로 할당해라|
+||mutate(total =  math + english + science, mean = (math + english + science)/3)|mutate를 사용해서 total이라는 파생 변수를 생성|
 |summarise|summarise(`mean1 = mean(score),median1 = median(score)`)|mean과 median과 같은 `내장 함수를 사용하여 파생 변수와 요약본을 생성`|
