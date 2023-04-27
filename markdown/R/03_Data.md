@@ -36,7 +36,7 @@
 |코드|의미|주의사항|
 |---|---|---|
 |`m_csv <- read.csv("../data/month_50.csv.")`|csv 파일 불러오기|
-|`write.csv(month_50, "../data/month_50.csv.", row.names = FALSE)`|csv 파일로 저장하기|저장시 첫번째 열 삭제|
+|`write.csv(month_50, "../data/month_50.csv.", row.names = FALSE)`|csv 파일로 저장하기|`row.names = FALSE`로 저장시 첫번째 열 삭제|
 ---
 #### - **`데이터 시각화 하기`**
 |코드|결과|해석|비고|
