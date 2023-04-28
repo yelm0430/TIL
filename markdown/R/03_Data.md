@@ -43,10 +43,9 @@
 |---|---|---|---|---|
 |다양한 시각화|qplot|전처리 단계 데이터 확인용||install.packages("ggplot2")
 ||ggplot|최종 보고용(색, 크기, 폰트 등 세부조작 가능)| ggplot(data = mpg, aes(x=displ, y = hwy)|install.packages("ggplot2")
+||||ggplot(data = mpg, aes(x=displ, y = hwy)) + geom_point() + xlim(3,7) + ylim(10,30)
 |막대그래프|geom_col|평균 막대 그래프 : 데이터를 요약한 평균표를 만든 후 그 결과를 기반으로 그래프 생성
 ||geom_bar|빈도 막대 그래프 : 별도의 표를 만들지 않고 원자료를 이용해 그래프 생성
-||box plot|1)집단 간 분포 차이를 표현||install.packages("ggplot2")
-|||2)평균보다 데이터의 특성을 이해할수 있음|
+||box plot|1) 집단 간 분포 차이를 표현||install.packages("ggplot2")
+|||2) 평균보다 데이터의 특성을 이해할수 있음|
 |산점도|xyplot|데이터를 x축과 y축을 기준으로 산점도로 표현|xyplot(ozone ~ wind : month, data = aq_melt, layout = c(5,1))|install.packages("lattice")
-
-
