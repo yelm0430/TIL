@@ -114,8 +114,9 @@
 ||mutate(total =  math + english + science, mean = (math + english + science)/3)|mutate를 사용해서 total이라는 파생 변수를 생성|
 |summarise|summarise(`mean1 = mean(score),median1 = median(score)`)|mean과 median과 같은 `내장 함수를 사용하여 파생 변수와 요약본을 생성`|
 ---
-### **`파생 변수 생성 함수`**
-|함수|형식|코드|의미|
-|---|---|---|---|
-|melt|melt(데이터, id.vars ="기준열", measure.vars = "변화열")|aq_melt <-melt(air_low, id.vars = c("month","day"))|넓은 테이블을 긴 테이블 형태로 변형
-|dcast|dcast(data, 재구성에 사용할 고유 식별자 열과 행과 열을 구성하는 열)|aq_dcst <- dcast(aq_melt , month + day ~ variable)|긴 데이터를 넓은 데이터로 변환
+### **`행열 변환 함수`**
+|함수|필요한 패키지|형식|코드|의미|주의사항|
+|---|---|---|---|---|---|
+|melt|install.packages("reshape2")|melt(데이터, id.vars ="기준열", measure.vars = "변화열")|aq_melt <-melt(air_low, id.vars = c("month","day"),measure.vars = "ozone")|`넓은 테이블을 긴 테이블 형태로 변환`
+|||aq_melt <-melt(air_low, id.vars = c("month","day"))|measure.vars 생략시는 기존의 모든 데이터를 보여줌|
+|dcast|install.packages("reshape2")|dcast(data, 재구성에 사용할 고유 식별자 열과 행과 열을 구성하는 열)|aq_dcst <- dcast(aq_melt , month + day ~ variable)|`긴 데이터를 넓은 데이터로 변환`|melt가 되어있는 데이터에 대해서만 사용 가능|
