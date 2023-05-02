@@ -39,13 +39,18 @@
 |`write.csv(month_50, "../data/month_50.csv.", row.names = FALSE)`|csv 파일로 저장하기|`row.names = FALSE`로 저장시 첫번째 열 삭제|
 ---
 #### - **`데이터 시각화 하기`**
-|종류|함수|특징|예시|필요한 패키지|
-|---|---|---|---|---|
-|다양한 시각화|qplot|전처리 단계 데이터 확인용||install.packages("ggplot2")
-||ggplot|최종 보고용(색, 크기, 폰트 등 세부조작 가능)| ggplot(data = mpg, aes(x=displ, y = hwy)|install.packages("ggplot2")
-||||ggplot(data = mpg, aes(x=displ, y = hwy)) + geom_point() + xlim(3,7) + ylim(10,30)
-|막대그래프|geom_col|평균 막대 그래프 : 데이터를 요약한 평균표를 만든 후 그 결과를 기반으로 그래프 생성
-||geom_bar|빈도 막대 그래프 : 별도의 표를 만들지 않고 원자료를 이용해 그래프 생성
-||box plot|1) 집단 간 분포 차이를 표현||install.packages("ggplot2")
+|종류|함수|특징|예시|해석|사용 가능 인자|
+|---|---|---|---|---|---|
+|다양한 시각화|qplot|전처리 단계 데이터 확인용|||
+||ggplot|최종 보고용(색, 크기, 폰트 등 세부조작 가능)| ggplot(data = mpg, aes(x=displ, y = hwy)||
+||||ggplot(data = mpg, aes(x=displ, y = hwy)) + geom_point() + xlim(3,7) + ylim(10,30)|
+||||ggplot(data=df_mpg, aes(x = reorder(drv,`-`mean_hwy), y = mean_hwy)) + geom_col()|`mean을 기준으로 내림차순 정렬한 순서대로 그래프 보여주기`
+|막대그래프|geom_col|`평균 막대 그래프` : 데이터를 요약한 평균표를 만든 후 그 결과를 기반으로 그래프 생성
+||geom_bar|`빈도 막대 그래프` : 별도의 표를 만들지 않고 원자료를 이용해 그래프 생성|ggplot(data = df, aes(x = reorder(manufacturer,-mean_cty), y = mean_cty)) + `geom_bar(stat = "identity")`||mapping : aes() 함수를 통해 정의된 미지정한 매핑과 함께 사용
+||||||stat : 통계적 계산 방법을 지정합니다. identity로 지정하면 입력 데이터를 사용하여 막대 생성 
+||||||position : 막대를 어떻게 위치시킬지를 지정합니다. dodge로 지정하면, 막대를 분리하여 나란히 그리며 stack으로 지정하면, 막대를 겹쳐서 그립니다.
+||||||fill : 막대의 색상을 지정합니다.
+||box plot|1) 집단 간 분포 차이를 표현|||
 |||2) 평균보다 데이터의 특성을 이해할수 있음|
-|산점도|xyplot|데이터를 x축과 y축을 기준으로 산점도로 표현|xyplot(ozone ~ wind : month, data = aq_melt, layout = c(5,1))|install.packages("lattice")
+|산점도|xyplot|데이터를 x축과 y축을 기준으로 산점도로 표현|xyplot(ozone ~ wind : month, data = aq_melt, layout = c(5,1))||
+|선그래프|geom_line()|경제 지표가 시간에 따라 어떻게 변하는지 표현할 때 활용|ggplot(data = economics, aes(x = date , y = unemploy)) + geom_line()|
