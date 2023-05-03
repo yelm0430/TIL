@@ -11,6 +11,7 @@
 |코드|의미|설정|예시
 |---|---|---|---|
 |`par(family="AppleGothic")|OS 한글꺠짐`|
+|read.csv("경로",`fileEncoding = "euc-kr"`)|`파일 불러올시 오류발생시`|
 |ctrl + enter|실행
 |ctrl + shift + c|선택한 부분 주석처리
 |ctrl + 2|console 창으로 이동
